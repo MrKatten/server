@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -22,6 +22,15 @@ def list_prof(list):
              'климатолог', 'специалист по радиционной защите', 'астрогеолог', 'гляциолог', 'инженер жизнеобеспечения',
              'метеоролог', 'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
     return render_template('list_prof.html', profs=profs, list=list)
+
+
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    anketa = {'surname': 'Watny', 'name': 'Mark', 'education': 'выше среднего',
+              'profession': 'штурман марсохода', 'sex': 'male', 'motivation': 'Всегда мечтал застрять на Марсе!',
+              'ready': 'True'}
+    return render_template("auto_answer.html", anketa=anketa, title='Анкета')
 
 
 if __name__ == '__main__':
