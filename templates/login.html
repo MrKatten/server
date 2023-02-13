@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="cl">Аварийный доступ</h2>
+<form action="" method="post" novalidate>
+{{ form.hidden_tag() }}
+<p>
+    {{ form.username.label }}<br>
+    {{ form.username(class="form-control") }}<br>
+</p>
+<p>
+    {{ form.password.label }}<br>
+    {{ form.password(class="form-control", type="password") }}<br>
+</p>
+<p>
+    {{ form.username_capitan.label }}<br>
+    {{ form.username_capitan(class="form-control") }}<br>
+</p>
+<p>
+    {{ form.password_capitan.label }}<br>
+    {{ form.password_capitan(class="form-control") }}<br>
+</p>
+<p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+
+</form>
+{% endblock %}

@@ -1,3 +1,9 @@
 h4 { color: #aaaaaa;
    margin-left: 20px
 }
+
+h2.cl { background-image: url("/static/img/MARS-2-7.png");
+background-repeat: no-repeat;
+padding-left: 150px;
+padding-bottom: 10px
+}
